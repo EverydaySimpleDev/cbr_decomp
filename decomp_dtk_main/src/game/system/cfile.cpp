@@ -10,9 +10,9 @@ game/system/cfile.cpp:
 
 */
 //global var
-int lbl_8065ABB8 = 0;//8065abb8
-extern "C" void fn_801626A0(int dat);//801626a0 OSAllocFromHeap
+int __OSCurrHeap = 0;//8065abb8
+extern "C" void OSAllocFromHeap(int dat);//801626a0 -- local single-arg forward-declare matching this call site's actual register usage, NOT OSAllocFromHeap's real (heap, size) signature; do not "fix" to match Dolphin/OS/OSAlloc.h's declaration, this file is byte-exact matching as-is
 void CFile::fn_8019FCE4()//fn_8019FCE4__5CFileFv
 {
-	fn_801626A0(lbl_8065ABB8);
+	OSAllocFromHeap(__OSCurrHeap);
 }

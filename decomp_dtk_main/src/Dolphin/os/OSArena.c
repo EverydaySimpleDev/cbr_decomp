@@ -55,20 +55,3 @@ void OSSetArenaLo(void* arena_lo)
   blr
 */
 
-/**
- * @note Address: N/A
- * @note Size: 0x2C
- */
-void OSAllocFromArenaLo(void)
-{
-	// UNUSED FUNCTION
-}
-
-/**
- * @note Address: N/A
- * @note Size: 0x20
- */
-void OSAllocFromArenaHi(void)
-{
-	// UNUSED FUNCTION
-}

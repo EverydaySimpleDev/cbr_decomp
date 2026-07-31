@@ -114,6 +114,25 @@ FILE __files[4] =
 // clang-format on
 
 /**
+ * @note Address: 0x800C2A04
+ * @note Size: 0x70
+ */
+
+u32 __flush_all()
+{
+	u32 retval = 0;
+	FILE* __stream;
+	__stream = &__files[0];
+	while (__stream) {
+		if ((__stream->mMode.file_kind) && (fflush(__stream))) {
+			retval = -1;
+		}
+		__stream = __stream->mNextFile;
+	};
+	return retval;
+}
+
+/**
  * @note Address: 0x800C2A74
  * @note Size: 0xA8
  */
@@ -141,23 +160,4 @@ void __close_all()
 	}
 
 	__end_critical_region(stdin_access);
-}
-
-/**
- * @note Address: 0x800C2A04
- * @note Size: 0x70
- */
-
-u32 __flush_all()
-{
-	u32 retval = 0;
-	FILE* __stream;
-	__stream = &__files[0];
-	while (__stream) {
-		if ((__stream->mMode.file_kind) && (fflush(__stream))) {
-			retval = -1;
-		}
-		__stream = __stream->mNextFile;
-	};
-	return retval;
 }

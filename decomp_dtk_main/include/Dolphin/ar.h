@@ -42,6 +42,8 @@ u32 ARAlloc(u32 length);
 u32 ARInit(u32* stack_index_addr, u32 num_entries);
 u32 ARGetBaseAddress();
 u32 ARGetSize();
+void __ARClearInterrupt();
+u32 __ARGetInterruptStatus();
 
 // Unused/inlined in P2.
 u32 ARFree(u32* length);

@@ -2,6 +2,10 @@
 #include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
+extern int THPSimpleGetCurrentFrame(void);
+
+// NOTE: retail calls THPSimpleGetCurrentFrame() here, not GetTRKConnected() as the
+// generic vendored MetroTRK source assumes -- confirmed via true retail disassembly.
 BOOL usr_puts_serial(const char* msg)
 {
 	BOOL connect_ = FALSE;
@@ -9,7 +13,7 @@ BOOL usr_puts_serial(const char* msg)
 	char buf[2];
 
 	while (!connect_ && (c = *msg++) != '\0') {
-		BOOL connect = GetTRKConnected();
+		BOOL connect = THPSimpleGetCurrentFrame();
 
 		buf[0] = c;
 		buf[1] = '\0';

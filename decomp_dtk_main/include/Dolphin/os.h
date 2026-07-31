@@ -76,6 +76,7 @@ void OSRegisterVersion(const char*);
 #define OS_CONSOLE_TDEVKIT     0x20000000
 
 u32 OSGetConsoleType();
+u32 OSGetPhysicalMemSize();
 
 #define OS_SOUND_MODE_MONO   0u
 #define OS_SOUND_MODE_STEREO 1u

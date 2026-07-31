@@ -2,20 +2,6 @@
 #include "types.h"
 
 /**
- * @note Address: 0x800C6224
- * @note Size: 0x34
- */
-void __prep_buffer(FILE* file)
-
-{
-	file->mBufferPtr      = file->mBuffer;
-	file->mBufferLength   = file->mBufferSize;
-	file->mBufferLength   = file->mBufferLength - (file->mPosition & file->mBufferAlignment);
-	file->mBufferPosition = file->mPosition;
-	return;
-}
-
-/**
  * @note Address: 0x800C6160
  * @note Size: 0xC4
  */
@@ -42,4 +28,18 @@ int __flush_buffer(FILE* file, size_t* length)
 	file->mBufferLength   = file->mBufferLength - (file->mPosition & file->mBufferAlignment);
 	file->mBufferPosition = file->mPosition;
 	return 0;
+}
+
+/**
+ * @note Address: 0x800C6224
+ * @note Size: 0x34
+ */
+void __prep_buffer(FILE* file)
+
+{
+	file->mBufferPtr      = file->mBuffer;
+	file->mBufferLength   = file->mBufferSize;
+	file->mBufferLength   = file->mBufferLength - (file->mPosition & file->mBufferAlignment);
+	file->mBufferPosition = file->mPosition;
+	return;
 }
