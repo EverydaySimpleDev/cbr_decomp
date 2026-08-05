@@ -204,10 +204,13 @@ static inline HSD_RObj* HSD_JObjGetRObj(HSD_JObj* jobj)
     return jobj->robj;
 }
 
+extern char lbl_8065AFBC[8];
+extern char lbl_8065AFC4[12];
+
 static inline bool HSD_JObjMtxIsDirty(HSD_JObj* jobj)
 {
     bool result;
-    HSD_ASSERT(564, jobj);
+    ((jobj) ? ((void)0) : __assert(lbl_8065AFBC, 605, lbl_8065AFC4));
     result = false;
     if (!(jobj->flags & JOBJ_USER_DEF_MTX) && (jobj->flags & JOBJ_MTX_DIRTY)) {
         result = true;
@@ -473,7 +476,7 @@ void HSD_JObjReqAnimAllByFlags(HSD_JObj* jobj, u32 flags, f32 frame);
 void HSD_JObjReqAnim(HSD_JObj* jobj, f32 frame);
 void JObjSortAnim(HSD_AObj* aobj);
 void JObjResetRST(HSD_JObj* jobj, HSD_Joint* joint);
-void JObjUpdateFunc(void* obj, enum type, HSD_ObjData* val);
+void JObjUpdateFunc(void* obj, enum_t type, HSD_ObjData* val);
 void HSD_JObjAnim(HSD_JObj* jobj);
 void JObjAnimAll(HSD_JObj* jobj);
 s32 JObjLoad(HSD_JObj* jobj, HSD_Joint* joint, HSD_JObj* parent);

@@ -26,6 +26,7 @@ struct HSD_PObj {
         HSD_ShapeSet* shape_set;
         HSD_SList* envelope_list;
     } u;
+    HSD_AObj* aobj; // 0x18 - shape animation target; not nested in `u`, confirmed via disasm
 };
 
 struct HSD_PObjDesc {

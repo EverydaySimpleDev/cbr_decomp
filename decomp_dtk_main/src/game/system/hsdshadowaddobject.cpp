@@ -1,7 +1,7 @@
 #include <types.h>
 
 extern "C" void* fn_801D3C30(void* list, void* obj);
-extern "C" void fn_801DD248(const char* file, int line, const char* msg);
+extern "C" void __assert(const char* file, int line, const char* msg);
 extern "C" const char lbl_8020F5C4[]; // "object.h"
 extern "C" const char lbl_8020F5D0[]; // "HSD_OBJ(o)->ref_count != HSD_OBJ_NOREF"
 
@@ -34,7 +34,7 @@ extern "C" void HSD_ShadowAddObject(void* list, void* obj)
             REFCOUNT(obj)++;
             if (REFCOUNT(obj) == 0xffff)
             {
-                fn_801DD248(lbl_8020F5C4, 0x5d, lbl_8020F5D0);
+                __assert(lbl_8020F5C4, 0x5d, lbl_8020F5D0);
             }
         }
     }

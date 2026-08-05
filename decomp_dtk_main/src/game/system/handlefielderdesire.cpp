@@ -2,7 +2,7 @@
 
 extern "C" int generateRandomNumber();
 extern "C" void stopAudioAndResetDvdDataAndCloseDvdIfNeeded(void* addr, int a, int b);
-extern "C" int fn_801514C8(f32 v);
+extern "C" int __cvt_fp2unsigned(f32 v);
 extern "C" void fn_800B8850(char* obj);
 extern "C" void fn_800B7D54(char* obj);
 extern "C" int GetDeviceEntryAt0x38B(int idx);
@@ -221,9 +221,9 @@ Step5:
         fn(obj, 2, lbl_8065D3B4, 0, 0, 0);
     }
     {
-        int b8b8 = fn_801514C8(*(f32*)(obj + 0x8b8));
-        int b8b4 = fn_801514C8(*(f32*)(obj + 0x8b4));
-        int b8bc = fn_801514C8(*(f32*)(obj + 0x8bc));
+        int b8b8 = __cvt_fp2unsigned(*(f32*)(obj + 0x8b8));
+        int b8b4 = __cvt_fp2unsigned(*(f32*)(obj + 0x8b4));
+        int b8bc = __cvt_fp2unsigned(*(f32*)(obj + 0x8bc));
         VtableFn12C fn = *(VtableFn12C*)(*(char**)(obj + 0x34) + 0x12c);
         fn(obj, 0, lbl_8065D35C, b8b4, b8b8, b8bc);
     }

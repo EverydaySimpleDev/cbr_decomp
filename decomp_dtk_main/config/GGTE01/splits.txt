@@ -657,6 +657,33 @@ Runtime.PPCEABI.H/ReturnException.c:
 Dolphin/Runtime/ptmf_80151434.c:
 	.text       start:0x80151434 end:0x801514C8
 
+Dolphin/Runtime/cvtfp2unsigned_801514c8.c:
+	.text       start:0x801514C8 end:0x80151524
+
+Dolphin/Runtime/div2u_80151654.c:
+	.text       start:0x80151654 end:0x80151740
+
+Dolphin/Runtime/div2i_80151740.c:
+	.text       start:0x80151740 end:0x80151878
+
+Dolphin/Runtime/mod2u_80151878.c:
+	.text       start:0x80151878 end:0x8015195C
+
+Dolphin/Runtime/mod2i_8015195c.c:
+	.text       start:0x8015195C end:0x80151A68
+
+Dolphin/Runtime/shl2i_80151a68.c:
+	.text       start:0x80151A68 end:0x80151A8C
+
+Dolphin/Runtime/shr2u_80151a8c.c:
+	.text       start:0x80151A8C end:0x80151AB0
+
+Dolphin/Runtime/shr2i_80151ab0.c:
+	.text       start:0x80151AB0 end:0x80151AD8
+
+Dolphin/Runtime/cvtdblusll_80151ad8.c:
+	.text       start:0x80151AD8 end:0x80151BA4
+
 Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
 	.text       start:0x80151BA4 end:0x80151C20
 	.ctors      start:0x801FD660 end:0x801FD664
@@ -1080,11 +1107,26 @@ Dolphin/dvd/dvdfsinit_8016d748.c:
 Dolphin/dvd/dvdclose_8016dae8.c:
 	.text       start:0x8016DAE8 end:0x8016DB0C
 
+Dolphin/dvd/dvdreadasyncprio_8016db6c.c:
+	.text       start:0x8016DB6C end:0x8016DC2C
+
+Dolphin/dvd/cbforreadasync_8016dc2c.c:
+	.text       start:0x8016DC2C end:0x8016DC5C
+
 Dolphin/dvd/stubreturn_8016dc5c.c:
 	.text       start:0x8016DC5C end:0x8016DC60
 
 Dolphin/dvd/dvdlowwaitmotorstopped_8016eb08.c:
 	.text       start:0x8016EB08 end:0x8016EB30
+
+Dolphin/dvd/dvdreadabsasyncprio_8016f89c.c:
+	.text       start:0x8016F89C end:0x8016F978
+
+Dolphin/dvd/dvdreadabsasyncforbs_8016f978.c:
+	.text       start:0x8016F978 end:0x8016FA48
+
+Dolphin/dvd/dvdcancelstreamasync_8016fb1c.c:
+	.text       start:0x8016FB1C end:0x8016FBD8
 
 Dolphin/dvd/dvdreset_8016fca8.c:
 	.text       start:0x8016FCA8 end:0x8016FCEC
@@ -1123,6 +1165,24 @@ Dolphin/vi/vigetdtvstatus_80172af4.c:
 Dolphin/pad/paddisablerecalibration_80174678.c:
 	.text       start:0x80174678 end:0x801746F4
 
+Dolphin/ai/aistartdma_801747c0.c:
+	.text       start:0x801747C0 end:0x801747D8
+
+Dolphin/ai/aistopdma_801747d8.c:
+	.text       start:0x801747D8 end:0x801747F0
+
+Dolphin/ai/aigetdmastartaddr_801747f0.c:
+	.text       start:0x801747F0 end:0x8017480C
+
+Dolphin/ai/aigetstreamplaystate_801748e4.c:
+	.text       start:0x801748E4 end:0x801748F4
+
+Dolphin/ai/aigetdspsamplerate_801749d4.c:
+	.text       start:0x801749D4 end:0x801749E8
+
+Dolphin/ai/aisetstreamvolleft_80174acc.c:
+	.text       start:0x80174ACC end:0x80174AE8
+
 Dolphin/ar/argetdmastatus_80175044.c:
 	.text       start:0x80175044 end:0x80175080
 
@@ -1153,11 +1213,92 @@ Dolphin/card/CARDOpen.c:
 Dolphin/gx/zeroreturn_80183228.c:
 	.text       start:0x80183228 end:0x80183230
 
+Dolphin/gx/gxinitfifoptrs_801859a8.c:
+	.text       start:0x801859A8 end:0x80185A18
+
 Dolphin/gx/SetFieldsAt0xc0x10.c:
 	.text       start:0x80185A18 end:0x80185A24
 
+Dolphin/gx/gxsetcpufifo_80185a24.c:
+	.text       start:0x80185A24 end:0x80185B4C
+
+Dolphin/gx/gxsetgpfifo_80185b4c.c:
+	.text       start:0x80185B4C end:0x80185CEC
+
 Dolphin/gx/gxfiforeadenable_80185d7c.c:
 	.text       start:0x80185D7C end:0x80185DA0
+
+Dolphin/gx/gxfiforeaddisable_80185da0.c:
+	.text       start:0x80185DA0 end:0x80185DC4
+
+Dolphin/gx/gxwritefifointenable_80185df8.c:
+	.text       start:0x80185DF8 end:0x80185E28
+
+Dolphin/gx/gxwritefifointreset_80185e28.c:
+	.text       start:0x80185E28 end:0x80185E58
+
+Dolphin/gx/gxgetcpufifo_80185f58.c:
+	.text       start:0x80185F58 end:0x80185F60
+
+Dolphin/gx/gxgetgpfifo_80185f60.c:
+	.text       start:0x80185F60 end:0x80185F68
+
+Dolphin/gx/gxclearvtxdesc_80186880.c:
+	.text       start:0x80186880 end:0x801868B8
+
+Dolphin/gx/gxinvalidatevtxcache_80187154.c:
+	.text       start:0x80187154 end:0x80187164
+
+Dolphin/gx/gxsetnumtexgens_801873e4.c:
+	.text       start:0x801873E4 end:0x80187420
+
+Dolphin/gx/gxflush_801874b4.c:
+	.text       start:0x801874B4 end:0x80187510
+
+Dolphin/gx/gxsetdrawdone_80187844.c:
+	.text       start:0x80187844 end:0x801878DC
+
+Dolphin/gx/gxwaitdrawdone_801878dc.c:
+	.text       start:0x801878DC end:0x80187928
+
+Dolphin/gx/gxdrawdone_80187928.c:
+	.text       start:0x80187928 end:0x801879A8
+
+Dolphin/gx/gxpixmodesync_801879a8.c:
+	.text       start:0x801879A8 end:0x801879CC
+
+Dolphin/gx/gxpokealphamode_801879cc.c:
+	.text       start:0x801879CC end:0x801879E0
+
+Dolphin/gx/gxpokealpharead_801879e0.c:
+	.text       start:0x801879E0 end:0x80187A00
+
+Dolphin/gx/gxpokealphaupdate_80187a00.c:
+	.text       start:0x80187A00 end:0x80187A18
+
+Dolphin/gx/gxpokedstalpha_80187a94.c:
+	.text       start:0x80187A94 end:0x80187AB8
+
+Dolphin/gx/gxpokezmode_80187ad0.c:
+	.text       start:0x80187AD0 end:0x80187AF0
+
+Dolphin/gx/gxsetcullmode_80187f94.c:
+	.text       start:0x80187F94 end:0x80187FBC
+
+Dolphin/gx/gxinitlightattn_80188abc.c:
+	.text       start:0x80188ABC end:0x80188AD8
+
+Dolphin/gx/gxinitlightpos_80188d38.c:
+	.text       start:0x80188D38 end:0x80188D48
+
+Dolphin/gx/gxinitlightdir_80188d48.c:
+	.text       start:0x80188D48 end:0x80188D64
+
+Dolphin/gx/gxinitlightcolor_80188d64.c:
+	.text       start:0x80188D64 end:0x80188D70
+
+Dolphin/gx/gxloadlightobjimm_80188d70.c:
+	.text       start:0x80188D70 end:0x80188DEC
 
 Dolphin/gx/gxinittlutregion_80189a98.c:
 	.text       start:0x80189A98 end:0x80189AD0
@@ -1170,6 +1311,9 @@ Dolphin/gx/gxsetindirectmask_8018a2d0.c:
 
 Dolphin/gx/GXDisplayList.c:
 	.text       start:0x8018C0DC end:0x8018C14C
+
+Dolphin/gx/gxcleargpmetric_8018d0c0.c:
+	.text       start:0x8018D0C0 end:0x8018D0D0
 
 TRK_MINNOW_DOLPHIN/fn_8018d41c.c:
 	.text       start:0x8018D41C end:0x8018D424
@@ -1221,13 +1365,94 @@ game/system/loadmoduleandexecute.c:
 	extabindex  start:0x80007238 end:0x80007244
 	.text       start:0x801A92C4 end:0x801A93C8
 
+sysdolphin/baselib/hsdstateinvalidate_801a9f7c.c:
+	extab       start:0x80006330 end:0x80006338
+	extabindex  start:0x8000737C end:0x80007388
+	.text       start:0x801A9F7C end:0x801A9FDC
+
+sysdolphin/baselib/hsdstateinvalidaterendermode_801a9fdc.c:
+	.text       start:0x801A9FDC end:0x801AA034
+
+sysdolphin/baselib/hsdstateinvalidatevtxattr_801aa034.c:
+	extab       start:0x80006338 end:0x80006340
+	extabindex  start:0x80007388 end:0x80007394
+	.text       start:0x801AA034 end:0x801AA054
+
+sysdolphin/baselib/hsdstateinvalidateprimitive_801aa054.c:
+	.text       start:0x801AA054 end:0x801AA070
+
+sysdolphin/baselib/hsdstatesetalphaupdate_801aa070.c:
+	extab       start:0x80006340 end:0x80006348
+	extabindex  start:0x80007394 end:0x800073A0
+	.text       start:0x801AA070 end:0x801AA0B8
+
+sysdolphin/baselib/hsdstatesetcolorupdate_801aa0b8.c:
+	extab       start:0x80006348 end:0x80006350
+	extabindex  start:0x800073A0 end:0x800073AC
+	.text       start:0x801AA0B8 end:0x801AA100
+
+sysdolphin/baselib/hsdstatesetlinewidth_801aa100.c:
+	extab       start:0x80006350 end:0x80006358
+	extabindex  start:0x800073AC end:0x800073B8
+	.text       start:0x801AA100 end:0x801AA164
+
+sysdolphin/baselib/hsdstatesetzmode_801aa164.c:
+	extab       start:0x80006358 end:0x80006360
+	extabindex  start:0x800073B8 end:0x800073C4
+	.text       start:0x801AA164 end:0x801AA1F4
+
+sysdolphin/baselib/hsdstatesetcullmode_801aa1f4.c:
+	extab       start:0x80006360 end:0x80006368
+	extabindex  start:0x800073C4 end:0x800073D0
+	.text       start:0x801AA1F4 end:0x801AA230
+
+sysdolphin/baselib/hsdstatesetpointsize_801aa230.c:
+	extab       start:0x80006368 end:0x80006370
+	extabindex  start:0x800073D0 end:0x800073DC
+	.text       start:0x801AA230 end:0x801AA294
+
+sysdolphin/baselib/hsdsetmaterialshininess_801aa294.c:
+	.text       start:0x801AA294 end:0x801AA2A4
+
+sysdolphin/baselib/hsdsetuprendermodewithcustompe_801aa318.c:
+	extab       start:0x80006378 end:0x80006380
+	extabindex  start:0x800073E8 end:0x800073F4
+	.text       start:0x801AA318 end:0x801AA3A8
+
 game/system/hsdshadowaddobject.cpp:
 	extab       start:0x800063B8 end:0x800063C0
 	extabindex  start:0x80007448 end:0x80007454
 	.text       start:0x801AB1B4 end:0x801AB260
 
+sysdolphin/baselib/hsdpobjclearmtxmark_801acb64.c:
+	.text       start:0x801ACB64 end:0x801ACB7C
+
+sysdolphin/baselib/hsdpobjremoveall_801ae554.c:
+	extab       start:0x80006478 end:0x80006480
+	extabindex  start:0x80007568 end:0x80007574
+	.text       start:0x801AE554 end:0x801AE5C8
+
+sysdolphin/baselib/hsdpobjaddanimall_801aea6c.c:
+	extab       start:0x800064A0 end:0x800064A8
+	extabindex  start:0x800075A4 end:0x800075B0
+	.text       start:0x801AEA6C end:0x801AEAFC
+
+sysdolphin/baselib/hsdpobjclearflags_801aeb70.c:
+	.text       start:0x801AEB70 end:0x801AEB88
+
+sysdolphin/baselib/hsdpobjsetflags_801aeb88.c:
+	.text       start:0x801AEB88 end:0x801AEBA0
+
 game/system/ringgetnext.c:
 	.text       start:0x801AEEC4 end:0x801AEEDC
+
+sysdolphin/baselib/hsdtobjremoveall_801aeedc.c:
+	extab       start:0x800064F0 end:0x800064F8
+	extabindex  start:0x8000761C end:0x80007628
+	.text       start:0x801AEEDC end:0x801AEF50
+
+sysdolphin/baselib/hsdtobjgetcurrentbytype_801b10a4.c:
+	.text       start:0x801B10A4 end:0x801B10E0
 
 THP/THPAudio.cpp:
 	.text       start:0x801B66EC end:0x801B6714
@@ -1239,6 +1464,30 @@ game/system/hsddobjsetcurrent.c:
 game/system/updateflagstate.c:
 	.text       start:0x801B7990 end:0x801B79B0
 
+sysdolphin/baselib/hsddobjremoveall_801b7d8c.c:
+	.text       start:0x801B7D8C end:0x801B7E00
+
+sysdolphin/baselib/hsddobjalloc_801b7e00.c:
+	.text       start:0x801B7E00 end:0x801B7E5C
+
+sysdolphin/baselib/hsddobjresolverefsall_801b7e5c.c:
+	.text       start:0x801B7E5C end:0x801B7EC8
+
+sysdolphin/baselib/hsdstateinvalidatecolorchannel_801b8dc4.c:
+	.text       start:0x801B8DC4 end:0x801B8E1C
+
+sysdolphin/baselib/hsdstateinvalidatetevstage_801b8e1c.c:
+	.text       start:0x801B8E1C end:0x801B8E28
+
+sysdolphin/baselib/hsdstateinvalidatetevregister_801b8e28.c:
+	.text       start:0x801B8E28 end:0x801B8E48
+
+sysdolphin/baselib/hsdstateinvalidatetexcoordgen_801b8e48.c:
+	.text       start:0x801B8E48 end:0x801B8E54
+
+sysdolphin/baselib/hsdmobjsetcurrent_801b8e54.c:
+	.text       start:0x801B8E54 end:0x801B8E5C
+
 game/system/getobjectfield_801b8e5c.cpp:
 	.text       start:0x801B8E5C end:0x801B8E74
 
@@ -1248,8 +1497,14 @@ game/system/setflagonobject.c:
 game/system/clearnodeflag.c:
 	.text       start:0x801B8E8C end:0x801B8EA4
 
+sysdolphin/baselib/hsdmobjaddanim_801b8f04.c:
+	.text       start:0x801B8F04 end:0x801B8F6C
+
 game/system/processdataforqueue.c:
 	.text       start:0x801BA030 end:0x801BA150
+
+sysdolphin/baselib/hsdmobjunset_801ba30c.c:
+	.text       start:0x801BA30C end:0x801BA330
 
 game/system/settranslationx.c:
 	.text       start:0x801BA40C end:0x801BA42C
@@ -1257,8 +1512,179 @@ game/system/settranslationx.c:
 game/system/ringgetstart.c:
 	.text       start:0x801BA42C end:0x801BA444
 
+sysdolphin/baselib/hsdmobjremove_801ba444.c:
+	.text       start:0x801BA444 end:0x801BA494
+
+sysdolphin/baselib/hsdaobjinitallocdata_801ba7c8.c:
+	.text       start:0x801BA7C8 end:0x801BA7F8
+
+sysdolphin/baselib/hsdaobjgetflags_801ba7f8.c:
+	.text       start:0x801BA7F8 end:0x801BA810
+
+sysdolphin/baselib/hsdaobjsetflags_801ba810.c:
+	.text       start:0x801BA810 end:0x801BA82C
+
+sysdolphin/baselib/hsdaobjinitendcallback_801ba82c.c:
+	.text       start:0x801BA82C end:0x801BA83C
+
+sysdolphin/baselib/hsdaobjremove_801babb8.c:
+	.text       start:0x801BABB8 end:0x801BAC28
+
+sysdolphin/baselib/hsdaobjfree_801bac94.c:
+	.text       start:0x801BAC94 end:0x801BACC8
+
+sysdolphin/baselib/hsdaobjsetrewindframe_801bd020.c:
+	.text       start:0x801BD020 end:0x801BD030
+
+sysdolphin/baselib/hsdaobjsetendframe_801bd030.c:
+	.text       start:0x801BD030 end:0x801BD040
+
+sysdolphin/baselib/hsdlobjgetcurrentbytype_801be7f4.c:
+	.text       start:0x801BE7F4 end:0x801BE828
+
+sysdolphin/baselib/hsdlightid2index_801be828.c:
+	.text       start:0x801BE828 end:0x801BE914
+
+sysdolphin/baselib/hsdlobjsetcolor_801be984.c:
+	.text       start:0x801BE984 end:0x801BE990
+
+sysdolphin/baselib/hsdlobjgetcolor_801be990.c:
+	.text       start:0x801BE990 end:0x801BE99C
+
+sysdolphin/baselib/hsdlobjsetspot_801be99c.c:
+	.text       start:0x801BE99C end:0x801BE9B0
+
+sysdolphin/baselib/hsdlobjsetdistattn_801be9b0.c:
+	.text       start:0x801BE9B0 end:0x801BE9C8
+
+sysdolphin/baselib/hsdlobjsetposition_801be9c8.c:
+	.text       start:0x801BE9C8 end:0x801BEA50
+
+sysdolphin/baselib/hsdlobjsetinterest_801bea90.c:
+	.text       start:0x801BEA90 end:0x801BEB18
+
+sysdolphin/baselib/hsdlobjgetpositionwobj_801beb58.c:
+	.text       start:0x801BEB58 end:0x801BEB70
+
+sysdolphin/baselib/hsdlobjgetinterestwobj_801beb70.c:
+	.text       start:0x801BEB70 end:0x801BEB88
+
+sysdolphin/baselib/hsdlobjaddanim_801bf08c.c:
+	.text       start:0x801BF08C end:0x801BF120
+
+sysdolphin/baselib/hsdcobjgetinterestwobj_801c0164.c:
+	.text       start:0x801C0164 end:0x801C01A4
+
+sysdolphin/baselib/hsdcobjgeteyepositionwobj_801c01a4.c:
+	.text       start:0x801C01A4 end:0x801C01E4
+
+sysdolphin/baselib/hsdcobjgetinterest_801c01e4.c:
+	.text       start:0x801C01E4 end:0x801C0250
+
+sysdolphin/baselib/hsdcobjsetinterest_801c0250.c:
+	.text       start:0x801C0250 end:0x801C02BC
+
+sysdolphin/baselib/hsdcobjgeteyeposition_801c02bc.c:
+	.text       start:0x801C02BC end:0x801C0328
+
+sysdolphin/baselib/hsdcobjseteyeposition_801c0328.c:
+	.text       start:0x801C0328 end:0x801C0394
+
+sysdolphin/baselib/hsdcobjsetmtxdirty_801c0cc8.c:
+	.text       start:0x801C0CC8 end:0x801C0CD8
+
+sysdolphin/baselib/hsdcobjgetinvviewingmtxptrdirect_801c0d58.c:
+	.text       start:0x801C0D58 end:0x801C0DBC
+
+sysdolphin/baselib/hsdcobjsetfov_801c1450.c:
+	.text       start:0x801C1450 end:0x801C1470
+
+sysdolphin/baselib/hsdcobjsetaspect_801c1470.c:
+	.text       start:0x801C1470 end:0x801C1490
+
+sysdolphin/baselib/hsdcobjsettop_801c1490.c:
+	.text       start:0x801C1490 end:0x801C14C4
+
+sysdolphin/baselib/hsdcobjsetbottom_801c14c4.c:
+	.text       start:0x801C14C4 end:0x801C14F8
+
+sysdolphin/baselib/hsdcobjsetleft_801c14f8.c:
+	.text       start:0x801C14F8 end:0x801C152C
+
+sysdolphin/baselib/hsdcobjsetright_801c152c.c:
+	.text       start:0x801C152C end:0x801C1560
+
+sysdolphin/baselib/hsdcobjgetnear_801c1560.c:
+	.text       start:0x801C1560 end:0x801C1578
+
+sysdolphin/baselib/hsdcobjsetnear_801c1578.c:
+	.text       start:0x801C1578 end:0x801C1588
+
+sysdolphin/baselib/hsdcobjgetfar_801c1588.c:
+	.text       start:0x801C1588 end:0x801C15A0
+
+sysdolphin/baselib/hsdcobjsetfar_801c15a0.c:
+	.text       start:0x801C15A0 end:0x801C15B0
+
+sysdolphin/baselib/hsdcobjsetscissor_801c15b0.c:
+	.text       start:0x801C15B0 end:0x801C15CC
+
+sysdolphin/baselib/hsdcobjsetscissorx4_801c15cc.c:
+	.text       start:0x801C15CC end:0x801C15E8
+
+sysdolphin/baselib/hsdcobjsetviewport_801c15e8.c:
+	.text       start:0x801C15E8 end:0x801C1674
+
+sysdolphin/baselib/hsdcobjsetviewportf_801c1674.c:
+	.text       start:0x801C1674 end:0x801C16A0
+
+sysdolphin/baselib/hsdcobjsetviewportfx4_801c16a0.c:
+	.text       start:0x801C16A0 end:0x801C16BC
+
+sysdolphin/baselib/hsdcobjgetprojectiontype_801c16bc.c:
+	.text       start:0x801C16BC end:0x801C16D4
+
+sysdolphin/baselib/hsdcobjsetprojectiontype_801c16d4.c:
+	.text       start:0x801C16D4 end:0x801C16E4
+
+sysdolphin/baselib/hsdcobjsetfrustum_801c16e4.c:
+	.text       start:0x801C16E4 end:0x801C1708
+
+sysdolphin/baselib/hsdcobjsetortho_801c1708.c:
+	.text       start:0x801C1708 end:0x801C172C
+
+sysdolphin/baselib/hsdcobjgetflags_801c172c.c:
+	.text       start:0x801C172C end:0x801C1734
+
+sysdolphin/baselib/hsdcobjsetflags_801c1734.c:
+	.text       start:0x801C1734 end:0x801C174C
+
+sysdolphin/baselib/hsdcobjclearflags_801c174c.c:
+	.text       start:0x801C174C end:0x801C1764
+
+sysdolphin/baselib/hsdcobjgetcurrent_801c1764.c:
+	.text       start:0x801C1764 end:0x801C176C
+
+sysdolphin/baselib/hsdfobjinitallocdata_801c1dd0.c:
+	.text       start:0x801C1DD0 end:0x801C1F4C
+
+sysdolphin/baselib/hsdfobjfree_801c3b20.c:
+	.text       start:0x801C3B20 end:0x801C3B4C
+
 game/system/renderchildobjects.c:
 	.text       start:0x801C4084 end:0x801C4114
+
+sysdolphin/baselib/hsdjobjreqanimall_801c4704.c:
+	.text       start:0x801C4704 end:0x801C4728
+
+sysdolphin/baselib/hsdjobjresolverefs_801c6840.c:
+	.text       start:0x801C6840 end:0x801C6938
+
+sysdolphin/baselib/hsdjobjunrefthis_801c6e20.c:
+	.text       start:0x801C6E20 end:0x801C6EC8
+
+sysdolphin/baselib/hsdjobjaddchild_801c6ec8.c:
+	.text       start:0x801C6EC8 end:0x801C7014
 
 game/system/getvalueifbitsetinmask.c:
 	.text       start:0x801C7014 end:0x801C7040
@@ -1268,3 +1694,96 @@ game/system/getvalueatoffset_801c7040.cpp:
 
 game/system/updatetreenodestate.c:
 	.text       start:0x801C7744 end:0x801C77F0
+
+sysdolphin/baselib/hsdjobjalloc_801c77f0.c:
+	.text       start:0x801C77F0 end:0x801C784C
+
+sysdolphin/baselib/hsdgetnbbits_801d0524.c:
+	.text       start:0x801D0524 end:0x801D05E4
+
+sysdolphin/baselib/hsdobjsetheap_801d0684.c:
+	.text       start:0x801D0684 end:0x801D06A0
+
+sysdolphin/baselib/hsdobjalloc_801d09e4.c:
+	.text       start:0x801D09E4 end:0x801D0B34
+
+sysdolphin/baselib/hsdobjfree_801d0b34.c:
+	.text       start:0x801D0B34 end:0x801D0B5C
+
+sysdolphin/baselib/hsdobjallocinit_801d0b5c.c:
+	.text       start:0x801D0B5C end:0x801D0C80
+
+sysdolphin/baselib/hsdrobjinitallocdata_801d0c80.c:
+	.text       start:0x801D0C80 end:0x801D0CC4
+
+sysdolphin/baselib/hsdidinitallocdata_801d2c88.c:
+	.text       start:0x801D2C88 end:0x801D2CB8
+
+sysdolphin/baselib/hsdidsetup_801d2cb8.c:
+	.text       start:0x801D2CB8 end:0x801D2CE8
+
+sysdolphin/baselib/hsdidinserttotable_801d2ce8.c:
+	.text       start:0x801D2CE8 end:0x801D2DD4
+
+sysdolphin/baselib/hsdidremovebyidfromtable_801d2dd4.c:
+	.text       start:0x801D2DD4 end:0x801D2E80
+
+sysdolphin/baselib/hsdidgetdatafromtable_801d2e80.c:
+	.text       start:0x801D2E80 end:0x801D2F08
+
+sysdolphin/baselib/hsdwobjreqanim_801d2f08.c:
+	.text       start:0x801D2F08 end:0x801D2F54
+
+sysdolphin/baselib/hsdwobjaddanim_801d2f54.c:
+	.text       start:0x801D2F54 end:0x801D2FBC
+
+sysdolphin/baselib/wobjupdatefunc_801d2fbc.c:
+	.text       start:0x801D2FBC end:0x801D3100
+
+sysdolphin/baselib/wobjload_801d3148.c:
+	.text       start:0x801D3148 end:0x801D31B0
+
+sysdolphin/baselib/hsdwobjinit_801d31b0.c:
+	.text       start:0x801D31B0 end:0x801D3224
+
+sysdolphin/baselib/hsdwobjloaddesc_801d3224.c:
+	.text       start:0x801D3224 end:0x801D32BC
+
+sysdolphin/baselib/hsdwobjsetposition_801d32bc.c:
+	.text       start:0x801D32BC end:0x801D3304
+
+sysdolphin/baselib/hsdwobjsetpositionx_801d3304.c:
+	.text       start:0x801D3304 end:0x801D33D8
+
+sysdolphin/baselib/hsdwobjsetpositiony_801d33d8.c:
+	.text       start:0x801D33D8 end:0x801D34AC
+
+sysdolphin/baselib/hsdwobjsetpositionz_801d34ac.c:
+	.text       start:0x801D34AC end:0x801D3580
+
+sysdolphin/baselib/hsdwobjgetposition_801d3580.c:
+	.text       start:0x801D3580 end:0x801D3668
+
+sysdolphin/baselib/hsdwobjalloc_801d3668.c:
+	.text       start:0x801D3668 end:0x801D36C4
+
+sysdolphin/baselib/hsdlistinitallocdata_801d3b10.c:
+	.text       start:0x801D3B10 end:0x801D3B54
+
+sysdolphin/baselib/hsdslistalloc_801d3b54.c:
+	.text       start:0x801D3B54 end:0x801D3BB0
+
+sysdolphin/baselib/hsdslistallocandappend_801d3bb0.c:
+	.text       start:0x801D3BB0 end:0x801D3C30
+
+sysdolphin/baselib/hsdslistallocandprepend_801d3c30.c:
+	.text       start:0x801D3C30 end:0x801D3CB0
+
+sysdolphin/baselib/hsdslistappendlist_801d3cb0.c:
+	.text       start:0x801D3CB0 end:0x801D3D20
+
+sysdolphin/baselib/hsdslistprependlist_801d3d20.c:
+	.text       start:0x801D3D20 end:0x801D3D70
+
+sysdolphin/baselib/hsdslistremove_801d3d70.c:
+	.text       start:0x801D3D70 end:0x801D3DC0

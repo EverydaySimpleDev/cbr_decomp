@@ -3,7 +3,7 @@
 
 extern EXIControl Ecb[EXI_MAX_CHAN];
 extern void SetExiInterruptMask(s32 chan, EXIControl* exi);
-extern s32 fn_80151740(OSTime time, s32 unused, s32 divisor);
+extern s32 __div2i(OSTime time, s32 unused, s32 divisor);
 
 //8015E0EC
 ASM int EXIClearInterrupts(register s32 chan, register BOOL exiBit, register BOOL tcBit, register BOOL extBit)
@@ -125,10 +125,10 @@ check1000:
     bl      OSGetTime
     li      r5, 0x0
     addi    r6, r27, 0x0
-    bl      fn_80151740
+    bl      __div2i
     li      r5, 0x0
     li      r6, 0x64
-    bl      fn_80151740
+    bl      __div2i
     addi    r4, r4, 0x1
     slwi    r0, r28, 2
     addi    r3, r31, 0x30c0

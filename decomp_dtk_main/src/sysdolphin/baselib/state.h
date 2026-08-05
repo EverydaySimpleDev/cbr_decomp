@@ -18,7 +18,9 @@
 #define HSD_STATE_RENDER_MODE 0x40
 
 typedef struct HSD_Chan {
+#ifdef __cplusplus
     public:
+#endif
     struct HSD_Chan* next;
     u32 chan;
     u32 flags;

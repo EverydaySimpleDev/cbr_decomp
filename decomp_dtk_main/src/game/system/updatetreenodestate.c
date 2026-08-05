@@ -1,6 +1,6 @@
 #include <types.h>
 
-extern void fn_801DD248(char* file, int line, char* assertion);
+extern void __assert(char* file, int line, char* assertion);
 extern void fn_801C89A8(void* obj);
 
 // MWCC can't express these lbl_ SDA21 address-ofs directly; hardcoded as the
@@ -35,7 +35,7 @@ ASM void UpdateTreeNodeState(register void* self, register u32 value, register u
     OPWORD_LI_R3_SDA21
     li      r4, 0x25d
     OPWORD_LI_R5_SDA21
-    bl      fn_801DD248
+    bl      __assert
 skipAssert:
     lwz     r4, 0x14(r29)
     li      r3, 0x0

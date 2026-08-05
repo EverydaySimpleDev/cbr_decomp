@@ -2,7 +2,7 @@
 
 typedef unsigned char BOOL8;
 
-extern "C" void fn_801DD248(char* file, int line, char* assertion);
+extern "C" void __assert(char* file, int line, char* assertion);
 extern "C" char lbl_8065D3A0[8];
 extern "C" char lbl_8065D3A8[8];
 extern "C" void HSD_JObjSetupMatrixSub(void* jobj);
@@ -19,7 +19,7 @@ extern "C" void GetBoxLengths(f32* dst, void* unused, char* jobj)
 {
     BOOL8 valid = (jobj != NULL);
     if (!valid) {
-        fn_801DD248(lbl_8065D3A0, 0x47c, lbl_8065D3A8);
+        __assert(lbl_8065D3A0, 0x47c, lbl_8065D3A8);
     }
 
     if (jobj != NULL) {
@@ -35,7 +35,7 @@ extern "C" void GetBoxLengths(f32* dst, void* unused, char* jobj)
                 HSD_JObjSetupMatrixSub(jobj);
             }
         } else {
-            fn_801DD248(lbl_8065D3A0, 0x25d, lbl_8065D3A8);
+            __assert(lbl_8065D3A0, 0x25d, lbl_8065D3A8);
         }
     }
 

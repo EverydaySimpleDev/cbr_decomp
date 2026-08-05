@@ -1,8 +1,9 @@
-#include <types.h>
+#include "Dolphin/gx.h"
 
 //80185A18
-void SetFieldsAt0xC0x10_80185A18(void* obj, void* a, void* b)
+void GXInitFifoLimits(GXFifoObj* fifo, u32 hiWaterMark, u32 loWaterMark)
 {
-    *(void**)((char*)obj + 0xC) = a;
-    *(void**)((char*)obj + 0x10) = b;
+    GXFifoObjPriv* pFifo = (GXFifoObjPriv*)fifo;
+    pFifo->highWatermark = hiWaterMark;
+    pFifo->lowWatermark  = loWaterMark;
 }

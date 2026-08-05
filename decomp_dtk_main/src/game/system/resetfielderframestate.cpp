@@ -1,7 +1,7 @@
 #include <types.h>
 
 extern "C" void fn_801C89A8(char* jobj);
-extern "C" void fn_801DD248(char* file, int line, char* assertion);
+extern "C" void __assert(char* file, int line, char* assertion);
 extern "C" char lbl_8065D3A0[8];
 extern "C" char lbl_8065D3A8[8];
 extern "C" void InitializeDataValues(void* a, int b, int c);
@@ -20,13 +20,13 @@ extern "C" void ResetFielderFrameState(char* obj)
     char* node = *(char**)obj;
     if (node != NULL) {
         if (node == NULL) {
-            fn_801DD248(lbl_8065D3A0, 0x4af, lbl_8065D3A8);
+            __assert(lbl_8065D3A0, 0x4af, lbl_8065D3A8);
         }
 
         *(u32*)(node + 0x14) = *(u32*)(node + 0x14) & 0xFC7FFFFFu;
 
         if (node == NULL) {
-            fn_801DD248(lbl_8065D3A0, 0x25d, lbl_8065D3A8);
+            __assert(lbl_8065D3A0, 0x25d, lbl_8065D3A8);
         }
 
         int flags = *(int*)(node + 0x14);

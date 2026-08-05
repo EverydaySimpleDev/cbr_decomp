@@ -5,7 +5,7 @@ extern "C" f64 lbl_8065D398;
 extern "C" f32 lbl_8065AB80;
 extern "C" f64 lbl_8065D588;
 extern "C" f64 __frsqrte(f64);
-extern "C" void fn_801DD248(char* file, int line, char* assertion);
+extern "C" void __assert(char* file, int line, char* assertion);
 extern "C" char lbl_8065D3A0[8];
 extern "C" char lbl_8065D3A8[8];
 extern "C" char lbl_8065D540[8];
@@ -191,10 +191,10 @@ extern "C" int GetIntAt2DArray_A870(char* obj, int idx1, int idx2)
 extern "C" void CopyVec3FromOffset0x2C(void* unused, char* src, f32* dst)
 {
     if (src == NULL) {
-        fn_801DD248(lbl_8065D3A0, 0x351, lbl_8065D3A8);
+        __assert(lbl_8065D3A0, 0x351, lbl_8065D3A8);
     }
     if (dst == NULL) {
-        fn_801DD248(lbl_8065D3A0, 0x352, lbl_8065D540);
+        __assert(lbl_8065D3A0, 0x352, lbl_8065D540);
     }
     dst[0] = *(f32*)(src + 0x2c);
     dst[1] = *(f32*)(src + 0x30);

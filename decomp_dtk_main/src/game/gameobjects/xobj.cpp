@@ -17,7 +17,7 @@ game/gameobjects/xobj.cpp:
 #include<xobjs.h>
 
 //80025aa4
-extern "C" void fn_801DD248(char* __assertion, char* __file, int __line);
+extern "C" void __assert(char* __assertion, char* __file, int __line);
 extern "C" void fn_801C89A8(hsdJObj* param);
 extern "C" char lbl_8065D3A0[8];
 void CXObj::JumpHandler(double distance, hsdJObj* objToMove, int unk)
@@ -32,13 +32,13 @@ void CXObj::JumpHandler(double distance, hsdJObj* objToMove, int unk)
             hsdPointer = objToMove;
             if (hsdPointer == 0)
             {
-                fn_801DD248(lbl_8065D3A0, (char*)0x3b8, -0x7f9a3de8);
+                __assert(lbl_8065D3A0, (char*)0x3b8, -0x7f9a3de8);
             }
             hsdPointer->unk[14] = distance;
             if (!hsdPointer->unk[5] && hsdPointer != 0)
             {
                     if (hsdPointer == 0) {
-                        fn_801DD248(lbl_8065D3A0, (char*)0x25d, -0x7f9a3de8);
+                        __assert(lbl_8065D3A0, (char*)0x25d, -0x7f9a3de8);
                     }
                     flag = false;
                     if (objToMove->unk[5] == 0 && objToMove->unk[5] != 0)

@@ -15,7 +15,7 @@ BOOL OnReset(BOOL final);
 static OSResetFunctionInfo ResetFunctionInfo = { OnReset, OS_RESET_PRIO_ALARM };
 
 extern void InsertAlarm(register OSAlarm* alarm, register OSTime fire, register OSAlarmHandler handler);
-extern void fn_80151740(void);
+extern void __div2i(void);
 extern OSTime __OSTimeToSystemTime(OSTime time);
 extern void __OSReschedule(void);
 
@@ -99,7 +99,7 @@ ASM static void InsertAlarm(register OSAlarm* alarm, register OSTime fire, regis
     subfe   r3, r7, r3
     addi    r5, r27, 0x0
     addi    r6, r26, 0x0
-    bl      fn_80151740
+    bl      __div2i
     li      r0, 0x1
     addc    r5, r4, r0
     mullw   r4, r27, r5

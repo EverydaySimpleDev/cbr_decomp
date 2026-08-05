@@ -93,7 +93,9 @@ typedef struct HSD_TExpRes {
 } HSD_TExpRes;
 
 typedef struct _HSD_TevDesc {
+#ifdef __cplusplus
     public:
+#endif
     struct _HSD_TevDesc* next;
     u32 flags;
     u32 stage;

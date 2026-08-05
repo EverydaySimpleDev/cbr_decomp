@@ -3,7 +3,7 @@
 extern "C" char* searchLinkedListForValue(char* head);
 extern "C" char* getCameraValue(char* head);
 extern "C" char* findValueWithSetBit(char* head);
-extern "C" void fn_801DD248(char* file, int line, char* assertion);
+extern "C" void __assert(char* file, int line, char* assertion);
 extern "C" char lbl_8065D528[8];
 extern "C" char lbl_8065D530[8];
 extern "C" char lbl_80209360[0x600];
@@ -59,7 +59,7 @@ Join:
     f32 f31;
     if (node != NULL) {
         if (node == NULL) {
-            fn_801DD248(lbl_8065D528, 0x95, lbl_8065D530);
+            __assert(lbl_8065D528, 0x95, lbl_8065D530);
         }
         f31 = *(f32*)(node + 0x4);
     } else {

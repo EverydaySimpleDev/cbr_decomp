@@ -49,7 +49,7 @@ extern "C" int processFielderDesire(char* obj)
                 *(u32*)(obj + 0x9CF8) = *(u32*)(obj + 0x9CF8) | 0x04000000;
 
                 VtableFn80 fn = *(VtableFn80*)(*(char**)(obj + 0x34) + 0x80);
-                fn(obj, 8, 0.0f, lbl_8065D380, lbl_8065D380, lbl_8065D43C, 1, 0, 0, 0);
+                fn(obj, 8, lbl_8065D35C, lbl_8065D380, lbl_8065D380, lbl_8065D43C, 1, 0, 0, 0);
                 return 1;
             }
         }
@@ -58,8 +58,8 @@ extern "C" int processFielderDesire(char* obj)
         CleanUpAndDeallocateMemoryForNode(obj + 0xa44);
     }
 
-    if (*(short*)(obj + 0x5894) >= 0) {
-        int devResult = GetDeviceEntryAt0x38A(*(short*)(obj + 0x5894));
+    if (*(short*)(obj + 0x15894) >= 0) {
+        int devResult = GetDeviceEntryAt0x38A(*(short*)(obj + 0x15894));
         struct
         {
             int deviceResult;
@@ -68,11 +68,11 @@ extern "C" int processFielderDesire(char* obj)
         buf.deviceResult = devResult;
         buf.label = lbl_802100A4;
         int result = ProcessObjectTask(MainGame + 0x9694, &buf, 0, 1);
-        *(int*)(obj + 0x58a0) = result;
-        *(short*)(obj + 0x5894) = -1;
+        *(int*)(obj + 0x158a0) = result;
+        *(short*)(obj + 0x15894) = -1;
     }
 
-    char* dev = *(char**)(obj + 0x58a0);
+    char* dev = *(char**)(obj + 0x158a0);
     if (dev == NULL) {
         return 1;
     }
@@ -89,7 +89,7 @@ extern "C" int processFielderDesire(char* obj)
     CleanUpAndDeallocateMemoryForNode(obj + 0xa44);
     *(int*)(obj + 0xa48) = 4;
 
-    char* devReload = *(char**)(obj + 0x58a0);
+    char* devReload = *(char**)(obj + 0x158a0);
     *(char**)(obj + 0xa64) = devReload;
 
     char* node2 = *(char**)(obj + 0xa64);
@@ -97,17 +97,17 @@ extern "C" int processFielderDesire(char* obj)
     *(int*)(obj + 0xa68) = 4;
 
     char* node3 = *(char**)(obj + 0xa64);
-    int p3val = *(int*)(obj + 0x5898);
+    int p3val = *(int*)(obj + 0x15898);
     VtableFn80 fn2 = *(VtableFn80*)(*(char**)(node3 + 0x34) + 0x80);
-    fn2(node3, p3val, 0.0f, lbl_8065D380, lbl_8065D380, lbl_8065D43C, 1, 0, 0, 0);
+    fn2(node3, p3val, lbl_8065D35C, lbl_8065D380, lbl_8065D380, lbl_8065D43C, 1, 0, 0, 0);
 
     char* node4 = *(char**)(obj + 0xa64);
     *(u32*)(node4 + 0x228) = *(u32*)(node4 + 0x228) | 0x40000000;
 
     VtableFn80 fn3 = *(VtableFn80*)(*(char**)(obj + 0x34) + 0x80);
-    fn3(obj, 8, 0.0f, lbl_8065D380, lbl_8065D380, lbl_8065D43C, 1, 0, 0, 0);
+    fn3(obj, 8, lbl_8065D35C, lbl_8065D380, lbl_8065D380, lbl_8065D43C, 1, 0, 0, 0);
 
-    *(int*)(obj + 0x58a0) = 0;
+    *(int*)(obj + 0x158a0) = 0;
 
     if (GetObjectUnderwaterStatus(obj + 0xa44) != 0) {
         processCameraData(obj + 0xa44);

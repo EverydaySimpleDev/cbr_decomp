@@ -85,7 +85,9 @@ struct HSD_Material {
 };
 
 struct HSD_PEDesc {
+#ifdef __cplusplus
     public:
+#endif
     u8 flags;
     u8 ref0;
     u8 ref1;
@@ -145,7 +147,8 @@ struct HSD_MObjInfo {
                                      HSD_TExp** list);
     /* +48 */ void (*setup_tev)(HSD_MObj* mobj, HSD_TObj* tobj,
                                 u32 rendermode);
-    /* +4C */ void (*unset)(HSD_MObj* mobj, u32 rendermode);
+    /* +4C */ HSD_ObjUpdateFunc update_func; // not in vendored source, confirmed via disasm
+    /* +50 */ void (*unset)(HSD_MObj* mobj, u32 rendermode);
 };
 
 #define HSD_MOBJ(o) ((HSD_MObj*) (o))

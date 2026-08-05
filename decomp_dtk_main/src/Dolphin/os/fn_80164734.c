@@ -1,7 +1,7 @@
 #include <types.h>
 
 extern void ICFlashInvalidate(void);
-extern int fn_8016F89C(void* buf, void* a, void* b, int c, int d);
+extern int DVDReadAbsAsyncPrio(void* buf, void* a, void* b, int c, int d);
 extern int fn_80170198(void);
 extern void fn_80168894(int flag);
 extern int DVDGetCommandBlockStatus(void* buf);
@@ -47,7 +47,7 @@ ASM void fn_80164770(register void* a, register void* b, register void* c)
     addi    r3, r1, 0x14
     li      r7, 0x0
     li      r8, 0x0
-    bl      fn_8016F89C
+    bl      DVDReadAbsAsyncPrio
     opword  0x48000004
     opword  0x48000004
     b       _loopCheck

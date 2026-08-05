@@ -3,7 +3,7 @@
 #include "Dolphin/OS/OSContext.h"
 #include "Dolphin/OS/OSInterrupt.h"
 
-extern char* fn_801514C8(f64 val);
+extern char* __cvt_fp2unsigned(f64 val);
 extern char lbl_80230268[0x1B4];
 
 //80163AE0
@@ -103,10 +103,10 @@ L7:
     opword  0x48000004
 L8:
     lfd     f1, 0x98(r26)
-    bl      fn_801514C8
+    bl      __cvt_fp2unsigned
     mr      r27, r3
     lfd     f1, 0x90(r26)
-    bl      fn_801514C8
+    bl      __cvt_fp2unsigned
     mr      r5, r3
     crclr   6
     mr      r4, r25
@@ -129,10 +129,10 @@ L8:
     opword  0x48000004
 L9:
     lfd     f1, 0x1d0(r26)
-    bl      fn_801514C8
+    bl      __cvt_fp2unsigned
     mr      r27, r3
     lfd     f1, 0x1c8(r26)
-    bl      fn_801514C8
+    bl      __cvt_fp2unsigned
     mr      r5, r3
     crclr   6
     mr      r4, r25

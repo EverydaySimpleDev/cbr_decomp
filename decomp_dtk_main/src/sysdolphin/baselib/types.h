@@ -9,6 +9,15 @@ typedef int enum_t;
 typedef int BOOL;
 typedef unsigned int uint;
 
+// This vendored header uses C++-style `bool` (see ASSERT_HANG below) even
+// though it's compiled as plain C; MWCC only provides it as a builtin in
+// C++ mode.
+#ifndef __cplusplus
+typedef int bool;
+#define true 1
+#define false 0
+#endif
+
 typedef signed char s8;
 typedef signed short s16;
 typedef signed long s32;
